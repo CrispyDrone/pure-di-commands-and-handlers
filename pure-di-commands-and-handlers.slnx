@@ -1,2 +1,6 @@
 <Solution>
+  <Project Path="NonGenericCommandHandler/NonGenericCommandHandler.csproj" />
+  <Project Path="OnlyGenericCommandHandlerUsingRootBind/OnlyGenericCommandHandlerUsingRootBind.csproj" />
+  <Project Path="OnlyGenericCommandHandlerUsingRootBindDoubleDispatch/OnlyGenericCommandHandlerUsingRootBindDoubleDispatch.csproj" />
+  <Project Path="OnlyGenericCommandHandlerUsingRoots/OnlyGenericCommandHandlerUsingRoots.csproj" />
 </Solution>
