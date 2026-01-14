@@ -7,6 +7,7 @@ var dispatcher = container.Dispatcher;
 args = ["Folder 1"];
 
 var command = ParseArgs();
+// does not work
 await dispatcher.Execute(command);
 
 args = ["sftp://user@host.com/my-folder"];
@@ -169,13 +170,9 @@ sealed partial class Composition
 {
     void Setup() =>
         DI.Setup(nameof(Composition))
-         // .GenericTypeArgument<ICommand>()
-         // .Roots<ICommandHandler<ICommand>>()
-         .RootBind<ICommandHandler<ImportRemoteFilesCommand>>().To<ImportRemoteFilesCommandHandler>()
-         .RootBind<ICommandHandler<ImportLocalFilesCommand>>().To<ImportLocalFilesCommandHandler>()
+        .GenericTypeArgument<ICommand>()
+        .Roots<ICommandHandler<ICommand>>()
         .Bind().To<RemoteClient>()
         .Bind().To<LocalFileSystem>()
-        // .GenericTypeArgument<ICommand>()
-        // .Roots<ICommandHandler<ICommand>>()
         .Root<CommandDispatcher>("Dispatcher");
 }

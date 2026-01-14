@@ -1,3 +1,5 @@
-This one receives the following message: Pure.DI.CannotResolveException: Cannot resolve composition root of type ICommandHandler`1[ICommand].
+This one receives the following message: 
 
-Can be resolved by 
+```
+Pure.DI.CannotResolveException: Cannot resolve composition root of type ICommandHandler`1[ICommand].
+```

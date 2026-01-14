@@ -7,6 +7,7 @@ var dispatcher = container.Dispatcher;
 args = ["Folder 1"];
 
 var command = ParseArgs();
+// doesn't work
 await dispatcher.Execute(command);
 
 args = ["sftp://user@host.com/my-folder"];
