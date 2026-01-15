@@ -36,7 +36,6 @@ public interface ICommandHandler
 public interface IDispatcher
 {
     Task Execute(ICommand command);
-    Task Execute<TCommand>(TCommand command) where TCommand : ICommand;
 }
 
 sealed class CommandDispatcher : IDispatcher
@@ -46,12 +45,6 @@ sealed class CommandDispatcher : IDispatcher
     public CommandDispatcher(Composition container)
     {
         _container = container;
-    }
-
-    public Task Execute<TCommand>(TCommand command) where TCommand : ICommand
-    {
-        var handler = _container.Resolve<ICommandHandler<TCommand>>();
-        return handler.Execute(command);
     }
 
     public Task Execute(ICommand command)

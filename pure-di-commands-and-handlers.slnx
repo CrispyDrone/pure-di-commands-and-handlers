@@ -1,6 +1,10 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="NonGenericCommandHandler/NonGenericCommandHandler.csproj" />
   <Project Path="OnlyGenericCommandHandlerUsingRootBind/OnlyGenericCommandHandlerUsingRootBind.csproj" />
   <Project Path="OnlyGenericCommandHandlerUsingRootBindDoubleDispatch/OnlyGenericCommandHandlerUsingRootBindDoubleDispatch.csproj" />
   <Project Path="OnlyGenericCommandHandlerUsingRoots/OnlyGenericCommandHandlerUsingRoots.csproj" />
+  <Project Path="UsingBuilder/UsingBuilder.csproj" />
 </Solution>
